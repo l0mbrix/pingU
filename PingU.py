@@ -29,4 +29,15 @@ async def pingvalo(interaction: discord.Interaction):
     gif_chosen = random.choice(gif_list)
     await interaction.response.send_message(f"<@&1514279036313014343> {gif_chosen}")
 
+@bot.tree.command(name="pingdemo", description="Ping les joueurs de la Démocratie")
+async def pingdemo(interaction:discord.Interaction):
+    gif_list = [
+        "https://tenor.com/view/helldivers2-helldivers-helldivers-parade-parade-marching-gif-12908433911826180403",
+        "https://tenor.com/view/helldiver-helldivers-helldivers-2-frogglish-gif-15658876242661211060",
+        "https://tenor.com/view/helldivers-freedom-democracy-spread-gif-7274461004019253594",
+        "https://tenor.com/view/helldivers-helldivers-2-super-earth-lets-goo-lets-go-gif-gif-13549931536192156596"
+    ]
+    gif_chosen = random.choice(gif_list)
+    await interaction.response.send_message(f"<@&1514622597042671686> {gif_chosen}")
+
 bot.run(TOKEN)
