@@ -6,20 +6,22 @@ This small Bot is designed to ping friends on Discord with a funny gif asking th
 
 # To-do List
 ## What's already there
-- [x] Discord command `/pingvalo` that can ping the `Team Valo` role on Discord
-- [x] A few selection of randomised gifs when `/pingvalo` is declared
+- [x] Discord command `/pingvalo` to ping `Team Valo` role on Discord
+- [x] Discord command `/pingdemo` to ping `Team Démocratie` role on Discord
+- [x] A few selection of randomised gifs for `/pingvalo`
+- [x] Discord command `/hhbfest` to count the days until the event
 
 ## What's missing (essentials - private version)
-- [] Add a cooldown system to prevent spaming
-- [] Add a few more gif 
-- [] Add new commands for other games
+- [ ] Add a cooldown system to prevent spaming
+- [ ] Add a few more gif 
+- [x] Add new commands for other games
 
 ## What's missing (polish - private version)
-- [] Add a `/HowToUse` command to explain how pingU works
+- [ ] Add a `/HowToUse` command to explain how pingU works
 
 ## What's missing (essentials - public version)
-- [] Add a way to add a command from Discord directly (admin)
-- [] Add a way to remove a command from Discord directly (admin)
+- [ ] Add a way to add a command from Discord directly (admin)
+- [ ] Add a way to remove a command from Discord directly (admin)
 
 ## What's missing (polish - public version)
 TBD

@@ -1,6 +1,7 @@
 import os
 import discord
 import random
+import datetime
 
 from discord.ext import commands
 from dotenv import load_dotenv
@@ -12,12 +13,28 @@ intents = discord.Intents.default()
 intents.message_content = True
 
 bot = commands.Bot(command_prefix="!", intents=intents)
+event = datetime.datetime(2026, 8, 13)
+today = datetime.datetime.now()
+difference = event - today
+days = difference.days
 
 @bot.event
 async def on_ready():
     print("PingU is ready!")
     await bot.tree.sync()
     print("Command synchronized!")
+
+@bot.tree.command(name="hhbfest", description="Compte les dodos avant le HHB Fest")
+async def hhbfest(interaction: discord.Interaction):
+    gif_list = [
+        "https://tenor.com/view/oooh-chris-pratt-parks-and-rec-surprised-shocked-gif-14609379",
+        "https://tenor.com/view/wiggle-shaquille-o-neal-shake-gif-13935192",
+        "https://tenor.com/view/spongebob-squidward-krabby-patty-smug-spongebob-squarepants-gif-9547716225990610286",
+        "https://tenor.com/view/toddlers-and-tiaras-big-grin-excited-girl-giddy-smile-gif-9689369815152198607",
+        "https://tenor.com/view/dancing-dance-happy-dance-carlton-the-carlton-gif-5314808"
+    ]
+    gif_chosen = random.choice(gif_list)
+    await interaction.response.send_message(f"Plus que {days} dodos avant le HHB Fest ! {gif_chosen}")
 
 @bot.tree.command(name="pingvalo", description="Ping les joueurs de Valorant")
 async def pingvalo(interaction: discord.Interaction):
