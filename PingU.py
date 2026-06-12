@@ -13,7 +13,7 @@ intents = discord.Intents.default()
 intents.message_content = True
 
 bot = commands.Bot(command_prefix="!", intents=intents)
-event = datetime.datetime(2026, 8, 13)
+event = datetime.date(2026, 8, 13)
 
 @bot.event
 async def on_ready():
