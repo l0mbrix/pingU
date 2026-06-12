@@ -14,9 +14,6 @@ intents.message_content = True
 
 bot = commands.Bot(command_prefix="!", intents=intents)
 event = datetime.datetime(2026, 8, 13)
-today = datetime.datetime.now()
-difference = event - today
-days = difference.days
 
 @bot.event
 async def on_ready():
@@ -34,6 +31,9 @@ async def hhbfest(interaction: discord.Interaction):
         "https://tenor.com/view/dancing-dance-happy-dance-carlton-the-carlton-gif-5314808"
     ]
     gif_chosen = random.choice(gif_list)
+    today = datetime.date.today()
+    difference = (event - today).days
+    days = difference if difference >= 0 else 0
     await interaction.response.send_message(f"Plus que {days} dodos avant le HHB Fest ! {gif_chosen}")
 
 @bot.tree.command(name="pingvalo", description="Ping les joueurs de Valorant")
