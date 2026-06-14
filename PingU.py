@@ -60,9 +60,20 @@ async def pingdemo(interaction:discord.Interaction):
 @bot.tree.command(name="pingpeak", description="Ping les joueurs de Peak")
 async def pingpeak(interaction: discord.Interaction):
     gif_list = [
-        "https://tenor.com/view/looker-peak-game-peak-aggrocrab-looking-gif-17841365269857828453"
+        "https://tenor.com/view/looker-peak-game-peak-aggrocrab-looking-gif-17841365269857828453",
+        "https://tenor.com/view/peak-game-dance-mountain-gif-11615295866428013080",
+        "https://tenor.com/view/peak-i-can-peak-can-you-peak-can-u-peak-gif-15912723029282734935"
     ]
     gif_chosen = random.choice(gif_list)
     await interaction.response.send_message(f"<@&1515650333060104203> {gif_chosen}")
+
+@bot.tree.command(name="pingaoe", description="Ping tous les Age of")
+async def pingaoe(interaction: discord.Interaction):
+    gif_list = [
+        "https://tenor.com/view/wololo-age-of-empires-empires-szaman-shaman-gif-21642450",
+        "https://tenor.com/view/cobra-car-aoe2-age-of-empires-2-gif-6787409075680168210"
+    ]
+    gif_chosen = random.choice(gif_list)
+    await interaction.response.send_message(f"<@&1515650765387993108> {gif_chosen}")
 
 bot.run(TOKEN)
