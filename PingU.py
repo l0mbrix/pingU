@@ -63,8 +63,6 @@ async def pingpeak(interaction: discord.Interaction):
         "https://tenor.com/view/looker-peak-game-peak-aggrocrab-looking-gif-17841365269857828453"
     ]
     gif_chosen = random.choice(gif_list)
-    mon_embed = discord.Embed()
-    mon_embed.set_image(url=gif_chosen)
-    await interaction.response.send_message(f"<@&1515650333060104203> {gif_chosen}", embed=mon_embed)
+    await interaction.response.send_message(f"<@&1515650333060104203> {gif_chosen}")
 
 bot.run(TOKEN)
