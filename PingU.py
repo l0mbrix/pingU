@@ -34,7 +34,8 @@ async def hhbfest(interaction: discord.Interaction):
     today = datetime.date.today()
     difference = (event - today).days
     days = difference if difference >= 0 else 0
-    await interaction.response.send_message(f"Plus que {days} dodos avant le HHB Fest !")
+    await interaction.response.defer()
+    await interaction.followup.send(f"Plus que {days} dodos avant le HHB Fest !")
     await interaction.followup.send(gif_chosen)
 
 @bot.tree.command(name="pingvalo", description="Ping les joueurs de Valorant")
