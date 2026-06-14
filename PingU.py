@@ -63,9 +63,9 @@ async def pingdemo(interaction:discord.Interaction):
 @bot.tree.command(name="pingpeak", description="Ping les joueurs de Peak")
 async def pingpeak(interaction: discord.Interaction):
     gif_list = [
-        "https://media1.tenor.com/m/95lDL3Hd_mUAAAAd/looker-peak-game.gif",
-        "https://media1.tenor.com/m/oTHSDM-BOhgAAAAd/peak-game.gif",
-        "https://media1.tenor.com/m/3NVZSTGTQ1cAAAAd/peak-i-can-peak.gif"
+        "https://http.cat/200.jpg",
+        "https://http.cat/200.jpg",
+        "https://http.cat/200.jpg"
     ]
     gif_chosen = random.choice(gif_list)
     mon_embed = discord.Embed()
