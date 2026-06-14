@@ -34,8 +34,7 @@ async def hhbfest(interaction: discord.Interaction):
     today = datetime.date.today()
     difference = (event - today).days
     days = difference if difference >= 0 else 0
-    await interaction.response.send_message(f"Plus que {days} dodos avant le HHB Fest !")
-    await interaction.followup.send(gif_chosen)
+    await interaction.response.send_message(f"Plus que {days} dodos avant le HHB Fest ! {gif_chosen}")
 
 @bot.tree.command(name="pingvalo", description="Ping les joueurs de Valorant")
 async def pingvalo(interaction: discord.Interaction):
@@ -45,8 +44,7 @@ async def pingvalo(interaction: discord.Interaction):
         "https://tenor.com/view/ben-stiller-dodgeball-gif-25279767"
     ]
     gif_chosen = random.choice(gif_list)
-    await interaction.response.send_message(f"<@&1514279036313014343>")
-    await interaction.followup.send(gif_chosen)
+    await interaction.response.send_message(f"<@&1514279036313014343> {gif_chosen}")
 
 @bot.tree.command(name="pingdemo", description="Ping les joueurs de la Démocratie")
 async def pingdemo(interaction:discord.Interaction):
@@ -57,17 +55,16 @@ async def pingdemo(interaction:discord.Interaction):
         "https://tenor.com/view/helldivers-helldivers-2-super-earth-lets-goo-lets-go-gif-gif-13549931536192156596"
     ]
     gif_chosen = random.choice(gif_list)
-    await interaction.response.send_message(f"<@&1514622597042671686>")
-    await interaction.followup.send(gif_chosen)
+    await interaction.response.send_message(f"<@&1514622597042671686> {gif_chosen}")
 
 @bot.tree.command(name="pingpeak", description="Ping les joueurs de Peak")
 async def pingpeak(interaction: discord.Interaction):
     gif_list = [
-        "https://media1.tenor.com/m/95lDL3Hd_mUAAAAd/looker-peak-game.gif"
+        "https://tenor.com/view/looker-peak-game-peak-aggrocrab-looking-gif-17841365269857828453"
     ]
     gif_chosen = random.choice(gif_list)
     mon_embed = discord.Embed()
     mon_embed.set_image(url=gif_chosen)
-    await interaction.response.send_message(f"<@&1515650333060104203>", embed=mon_embed)
+    await interaction.response.send_message(f"<@&1515650333060104203> {gif_chosen}", embed=mon_embed)
 
 bot.run(TOKEN)
